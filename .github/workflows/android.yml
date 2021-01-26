@@ -19,9 +19,20 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Just print info
         run: echo "$REPO_SECRET $EXAMPLE";
+  deploy:
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, "refs/tags")
+    needs: build
+    steps:
+      - name: Extract tag
+        id: tag-extractor
+        run: echo ::set-output name=TAG::${GITHUB_REF#refs/*/}
+      - name: Deploy
+        run: echo "Deploy ${{ steps.tag-extractor.outputs.TAG }}"
 #      - name: Set up JDK 1.8
 #        uses: actions/setup-java@v1
 #        with:
