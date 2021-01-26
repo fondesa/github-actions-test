@@ -8,7 +8,7 @@ on:
       # Matches all the tags in the format major.minor.patch (e.g. 1.12.3).
       # The regex must be surrounded with "/" following the Travis specs.
 #      - ^(\d+)\.(\d+)\.(\d+)$
-      - '*.*.*'
+      - "(\d+)\.(\d+)\.(\d+)"
   pull_request:
     branches:
       - master
