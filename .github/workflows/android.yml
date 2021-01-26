@@ -11,13 +11,17 @@ on:
     branches:
       - master
 
+env:
+  REPO_SECRET: ${{ secrets.REPOSITORY_SECRET }}
+  EXAMPLE: Foo
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Just print info
-        run: echo "LYRA";
+        run: echo "$REPO_SECRET $EXAMPLE";
 #      - name: Set up JDK 1.8
 #        uses: actions/setup-java@v1
 #        with:
