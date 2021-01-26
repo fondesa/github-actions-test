@@ -6,9 +6,7 @@ on:
       - master
     tags:
       # Matches all the tags in the format major.minor.patch (e.g. 1.12.3).
-      # The regex must be surrounded with "/" following the Travis specs.
-#      - ^(\d+)\.(\d+)\.(\d+)$
-      - (\d+)\.(\d+)\.(\d+)
+      - "[0-9]+.[0-9]+.[0-9]+"
   pull_request:
     branches:
       - master
