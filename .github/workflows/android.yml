@@ -25,7 +25,7 @@ jobs:
         run: echo "$REPO_SECRET $EXAMPLE";
   deploy:
     runs-on: ubuntu-latest
-    if: startsWith(github.ref, "refs/tags")
+    if: startsWith(github.ref, 'refs/tags')
     needs: build
     steps:
       - name: Extract tag
