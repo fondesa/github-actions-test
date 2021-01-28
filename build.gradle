@@ -24,5 +24,3 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
-
-println("LYRA " + System.getenv("REPO_SECRET"))
