@@ -1,4 +1,4 @@
-name: Android CI Tag
+name: GitHub CI
 
 on:
   push:
@@ -11,7 +11,7 @@ env:
   EXAMPLE: Foo
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

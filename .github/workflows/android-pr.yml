@@ -1,4 +1,4 @@
-name: Android CI PR
+name: GitHub CI
 
 on:
   pull_request:

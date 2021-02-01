@@ -1,4 +1,4 @@
-name: Android CI push
+name: GitHub CI
 
 on:
   push:
